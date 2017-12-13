@@ -1,0 +1,19 @@
+{
+  "name": "@z0mt3c/clean-html",
+  "version": "1.0.0",
+  "description": "clean html",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && lab test.js"
+  },
+  "author": "Timo Behrmann",
+  "license": "MIT",
+  "dependencies": {
+    "htmlparser2": "^3.9.2"
+  },
+  "devDependencies": {
+    "code": "^5.1.2",
+    "lab": "^15.1.2",
+    "standard": "*"
+  }
+}
