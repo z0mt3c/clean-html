@@ -15,5 +15,13 @@
     "code": "^5.1.2",
     "lab": "^15.1.2",
     "standard": "*"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z0mt3c/clean-html.git"
+  },
+  "bugs": {
+    "url": "https://github.com/z0mt3c/clean-html/issues"
+  },
+  "homepage": "https://github.com/z0mt3c/clean-html#readme"
 }
