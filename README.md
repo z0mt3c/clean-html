@@ -1,4 +1,6 @@
 # @z0mt3c/clean-html
+Clean html to avoid ssr rendering conflicts between client & server
+
 [![Build Status](https://img.shields.io/travis/z0mt3c/clean-html/master.svg)](https://travis-ci.org/z0mt3c/clean-html)
 [![Coverage Status](https://img.shields.io/coveralls/z0mt3c/clean-html/master.svg)](https://coveralls.io/r/z0mt3c/clean-html?branch=master)
 [![Dependency Status](https://img.shields.io/gemnasium/z0mt3c/clean-html.svg)](https://gemnasium.com/z0mt3c/clean-html)
