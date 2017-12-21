@@ -1,6 +1,7 @@
 const htmlparser = require('htmlparser2')
 
 const REMOVE_TAGS = ['center', 'font', 'script', 'style']
+const REMOVE_EMPTY_TAGS = ['p']
 const VOID_ELEMENTS = [
   'area',
   'base',
@@ -42,6 +43,7 @@ function isEmpty (node) {
 
 function shouldRemove (node) {
   if (node.type === 'text') return isEmpty(node)
+  if (REMOVE_EMPTY_TAGS.indexOf(node.name) !== -1) return isEmpty(node)
   return REMOVE_TAGS.indexOf(node.name) !== -1
 }
 
