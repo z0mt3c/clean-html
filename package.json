@@ -1,6 +1,6 @@
 {
   "name": "@z0mt3c/clean-html",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "clean html",
   "main": "index.js",
   "scripts": {
