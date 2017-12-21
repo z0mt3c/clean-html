@@ -1,7 +1,7 @@
 const htmlparser = require('htmlparser2')
 
 const REMOVE_TAGS = ['center', 'font', 'script', 'style']
-const REMOVE_EMPTY_TAGS = ['p']
+const REMOVE_EMPTY_TAGS = ['p', 'strong']
 const VOID_ELEMENTS = [
   'area',
   'base',
