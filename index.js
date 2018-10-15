@@ -1,6 +1,7 @@
 const htmlparser = require('htmlparser2')
 
-const REMOVE_TAGS = ['center', 'font', 'script', 'style']
+const REMOVE_TAGS = ['center', 'script', 'style']
+const UNWRAP_TAGS = ['font']
 const REMOVE_EMPTY_TAGS = ['p', 'strong']
 const VOID_ELEMENTS = [
   'area',
@@ -47,6 +48,10 @@ function shouldRemove (node) {
   return REMOVE_TAGS.indexOf(node.name) !== -1
 }
 
+function shouldUnwrap (node) {
+  return UNWRAP_TAGS.indexOf(node.name) !== -1 && !isEmpty(node)
+}
+
 function renderText (node) {
   if (shouldRemove(node)) return ''
   let text = node.data
@@ -57,7 +62,7 @@ function renderText (node) {
 
 function renderTag (node) {
   if (shouldRemove(node)) return ''
-  // if (shouldRemove(node) && !isEmpty(node)) return render(node.children)
+  if (shouldUnwrap(node)) return render(node.children)
 
   const attributes = Object.keys(node.attribs).map(attrib => {
     const value = node.attribs[attrib]
