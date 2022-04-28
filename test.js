@@ -12,4 +12,5 @@ lab.test('cleanup', async () => {
   expect(await cleaner('<p><strong></strong></p><br>')).to.equal('<br>')
   expect(await cleaner('<font style="vertical-align:inherit"><div>test</div></font>')).to.equal('<div>test</div>')
   expect(await cleaner('<font style="vertical-align:inherit">test</font>')).to.equal('test')
+  expect(await cleaner('&lt;a href&#61;&#34;https://www.google.de&#34;&gt;google&lt;/a&gt;')).to.equal('&lt;a href&#61;&#34;https://www.google.de&#34;&gt;google&lt;/a&gt;')
 })

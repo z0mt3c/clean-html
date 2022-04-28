@@ -80,7 +80,7 @@ function renderDirective (node) {
 }
 
 function render (nodes) {
-  var html = ''
+  let html = ''
 
   nodes.forEach(function (node) {
     if (node.type === 'root') {
@@ -109,7 +109,7 @@ function render (nodes) {
   return html.replace(/\n+/g, '\n')
 }
 
-module.exports = function (html) {
+module.exports = function (html, options = {}) {
   if (!html || html.trim().length === 0) return Promise.resolve(null)
   return new Promise((resolve, reject) => {
     const handler = new htmlparser.DomHandler(function (error, dom) {
@@ -118,7 +118,7 @@ module.exports = function (html) {
       resolve(html)
     })
 
-    var parser = new htmlparser.Parser(handler, {decodeEntities: true})
+    const parser = new htmlparser.Parser(handler, { decodeEntities: false, ...options })
     parser.write(html)
     parser.done()
   })
