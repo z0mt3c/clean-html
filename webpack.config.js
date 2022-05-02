@@ -6,6 +6,7 @@ const path = require('path');
    output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'clean-html.js',
+    globalObject: 'this',
     library: {
       name: 'clean-html',
       type: 'umd'
