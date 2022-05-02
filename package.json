@@ -2,9 +2,11 @@
   "name": "@z0mt3c/clean-html",
   "version": "1.1.0",
   "description": "clean html",
-  "main": "index.js",
+  "main": "dist/clean-html.js",
   "scripts": {
-    "test": "standard && lab test.js"
+    "test": "standard && lab test.js",
+    "build": "webpack build",
+    "prepare": "npm run build"
   },
   "author": "Timo Behrmann",
   "license": "MIT",
@@ -14,7 +16,9 @@
   "devDependencies": {
     "code": "^5.2.4",
     "lab": "^18.0.2",
-    "standard": "^17.0.0"
+    "standard": "^17.0.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
   },
   "repository": {
     "type": "git",
